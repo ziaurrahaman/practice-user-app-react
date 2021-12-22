@@ -1,16 +1,17 @@
 import logo from "./logo.svg";
-import styles from "./App.module.css";
+
 import UserForm from "./Components/UserForm";
-import { Button } from "@mui/material";
+import styles from "./Components/App.module.css";
+import { style } from "@mui/system";
 
 function App() {
+  const addUserHandler = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className={`${styles["user-form"]}`}>
-      <UserForm hintText={"User Name"}></UserForm>
-      <UserForm hintText={"Age"}></UserForm>
-      <Button className={`${styles["add-user-button"]}`} variant="contained">
-        Add User
-      </Button>
+      <UserForm></UserForm>
     </div>
   );
 }
